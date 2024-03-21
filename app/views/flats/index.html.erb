@@ -1,0 +1,8 @@
+<h1>Simple AirBnB</h1>
+<%= link_to("Add Flat", new_flat_path) %>
+
+<div id="flats">
+  <% @flats.each do |flat| %>
+    <%= render flat %>
+  <% end %>
+</div>

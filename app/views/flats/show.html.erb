@@ -1,0 +1,17 @@
+<h1>show</h1>
+
+<div class="flat">
+  <h3><%= @flat.name %></h3>
+  <p><%= @flat.address %></p>
+  <p><%= @flat.description %></p>
+  <div id="guest-cost">
+    <p><i class="fa-solid fa-user"></i> <%= @flat.number_of_guests %></p>
+    <p><i class="fa-solid fa-dollar-sign"></i> <%= @flat.price_per_night %></p>
+  </div>
+  <%= link_to("Edit details", edit_flat_path) %>
+  <%= link_to "Delete", flat_path(@flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+</div>
+
+
+<%= link_to("Return home", root_path) %>
